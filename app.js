@@ -9,4 +9,23 @@ GAME RULES:
 
 */
 
-var scores = [0,0];
+var scored, roundScores, activePlayer;
+
+scores = [0,0];
+roundScores = 0;
+activePlayer = 0;
+
+dice = Math.floor(Math.random() * 6) + 1;
+console.log(dice)
+
+//Method 1
+document.querySelector('#current-' + activePlayer).textContent = dice;
+
+//Method 2
+//document.querySelector('#current-' + activePlayer).innerHTML = '<em>' + dice + '</em>'
+
+var x = document.querySelector('#score-0').textContent;
+console.log(x);
+
+document.querySelector('.dice').style.display = 'none';
+
